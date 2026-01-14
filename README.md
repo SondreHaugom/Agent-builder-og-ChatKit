@@ -1,38 +1,43 @@
-# sv
+# LærlingBot
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+En intelligent chatbot som hjelper lærlinger og ansatte innen IT-utvikling med spørsmål relatert til kompetanseboka for VG3 IT-utvikler.
 
-## Creating a project
+## Om prosjektet
 
-If you're seeing this, you've probably already done this step. Congrats!
+LærlingBot er bygget med **OpenAI Agent Builder** og **ChatKit** for å gi lærlinger en enkel måte å få svar på spørsmål om læreplanen og kompetansekravene. Chatboten er koblet opp mot datasett fra kompetanseboka for VG3 løpet til IT-utvikler.
+
+## Teknologi
+
+- **Frontend**: SvelteKit
+- **Chatbot**: OpenAI ChatKit
+- **Backend**: SvelteKit API-ruter
+- **Datasett**: Kompetanseboka VG3 IT-utvikler
+
+## Installering
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
 ```
 
-## Developing
+## Utvikling
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start utviklingsserveren:
 
 ```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Miljøvariabler
 
-To create a production version of your app:
+Opprett en `.env` fil med følgende variabler:
+
+```
+OPENAI_API_KEY_LABS=din_openai_api_nøkkel
+AGENT_WORKFLOW=din_workflow_id
+```
+
+## Bygging
 
 ```sh
 npm run build
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
