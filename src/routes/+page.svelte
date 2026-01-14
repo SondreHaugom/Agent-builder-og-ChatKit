@@ -1,0 +1,43 @@
+<script>
+  import Orgbott from '$lib/components/Orgbott.svelte';
+  
+</script>
+
+<svelte:head>
+  <title>LærlingBot</title>
+  <meta name="description" content="LærlingBot - En intelligent chatbot for å hjelpe lærlinger og ansatte" />
+</svelte:head>
+
+<main>
+  
+  <div class="chat-wrapper">
+    <Orgbott />
+  </div>
+</main>
+
+<style>
+  main {
+    min-height: 100vh;
+    background:#333333;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chat-wrapper {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      padding: 1rem;
+    }
+    
+  }
+</style>
